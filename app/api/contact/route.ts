@@ -13,8 +13,15 @@ export async function POST(request: Request) {
     const category = typeof body.category === "string" ? body.category.trim() : "";
     const message =
       typeof body.message === "string" ? body.message.trim() : undefined;
+    type ContactItemInput = {
+      name?: unknown;
+      image?: unknown;
+      category?: unknown;
+      quantity?: unknown;
+      price?: unknown;
+    };
     const items = Array.isArray(body.items)
-      ? body.items.flatMap((item: any) => { {
+      ? body.items.flatMap((item: ContactItemInput) => {
           if (
             !item ||
             typeof item.name !== "string" ||
