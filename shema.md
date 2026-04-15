@@ -1,0 +1,145 @@
+# File Tree: delice douja
+
+**Generated:** 4/9/2026, 9:48:49 PM
+**Root Path:** `c:\Users\hp\Desktop\delice douja`
+
+```
+├── 📁 app
+│   ├── 📁 [locale]
+│   │   ├── 📁 contact
+│   │   │   └── 📄 page.tsx
+│   │   ├── 📁 store
+│   │   │   ├── 📄 loading.tsx
+│   │   │   └── 📄 page.tsx
+│   │   ├── 📄 layout.tsx
+│   │   └── 📄 page.tsx
+│   ├── 📁 admin
+│   │   ├── 📁 dashboard
+│   │   │   └── 📄 page.tsx
+│   │   ├── 📁 login
+│   │   │   └── 📄 page.tsx
+│   │   ├── 📁 products
+│   │   │   ├── 📁 [id]
+│   │   │   │   └── 📁 edit
+│   │   │   │       └── 📄 page.tsx
+│   │   │   └── 📁 new
+│   │   │       └── 📄 page.tsx
+│   │   └── 📄 layout.tsx
+│   ├── 📁 api
+│   │   ├── 📁 admin
+│   │   │   ├── 📁 login
+│   │   │   │   └── 📄 route.ts
+│   │   │   └── 📁 logout
+│   │   │       └── 📄 route.ts
+│   │   ├── 📁 contact
+│   │   │   └── 📄 route.ts
+│   │   ├── 📁 products
+│   │   │   ├── 📁 [id]
+│   │   │   │   └── 📄 route.ts
+│   │   │   └── 📄 route.ts
+│   │   └── 📁 upload
+│   │       └── 📄 route.ts
+│   ├── 📁 fonts
+│   │   ├── 📄 GeistMonoVF.woff
+│   │   └── 📄 GeistVF.woff
+│   ├── 📄 error.tsx
+│   ├── 📄 favicon.ico
+│   ├── 📄 global-error.tsx
+│   ├── 🎨 globals.css
+│   ├── 📄 layout.tsx
+│   ├── 📄 not-found.tsx
+│   ├── 📄 page.tsx
+│   ├── 📄 robots.ts
+│   └── 📄 sitemap.ts
+├── 📁 components
+│   ├── 📁 admin
+│   │   ├── 📄 DeleteProductButton.tsx
+│   │   ├── 📄 LogoutButton.tsx
+│   │   └── 📄 ProductEditor.tsx
+│   ├── 📄 ContactForm.tsx
+│   ├── 📄 DocumentLang.tsx
+│   ├── 📄 Footer.tsx
+│   ├── 📄 Header.tsx
+│   ├── 📄 LanguageSwitcher.tsx
+│   └── 📄 ProductCard.tsx
+├── 📁 lib
+│   ├── 📁 email
+│   │   └── 📄 order-notification.ts
+│   ├── 📁 types
+│   │   └── 📄 database.ts
+│   ├── 📄 api-auth.ts
+│   ├── 📄 auth.ts
+│   ├── 📄 constants.ts
+│   ├── 📄 ensure-service-role.ts
+│   ├── 📄 i18n.ts
+│   ├── 📄 supabase-errors.ts
+│   ├── 📄 supabaseClient.ts
+│   ├── 📄 supabaseServer.ts
+│   └── 📄 t.ts
+├── 📁 messages
+│   ├── ⚙️ ar.json
+│   ├── ⚙️ en.json
+│   └── ⚙️ fr.json
+├── 📁 pages
+│   ├── 📄 _app.tsx
+│   └── 📄 _error.tsx
+├── 📁 prisma
+├── 📁 public
+│   ├── 📁 brand
+│   │   ├── 🖼️ delice-douja.png
+│   │   └── 🖼️ delice-douja.svg
+│   └── 📁 uploads
+│       ├── ⚙️ .gitkeep
+│       ├── 🖼️ 0082a8f2-301e-4b92-bf8b-2df7f9ae0c64.jpg
+│       ├── 🖼️ 15ea5355-504b-4f5b-ad35-61a41af171af.jpg
+│       ├── 🖼️ 18342879-a257-4209-af25-20400e206404.jpg
+│       ├── 🖼️ 1b90526c-c93f-4e48-affe-d927e2385a6e.jpg
+│       ├── 🖼️ 2343c11d-9aa2-49bb-82aa-45e4c4218f2c.jpg
+│       ├── 🖼️ 2e07a6f0-548d-4436-8e00-c23b9935e8ab.jpg
+│       ├── 🖼️ 30fe82ff-fb01-404a-b222-84902eca1977.jpg
+│       ├── 🖼️ 35c909ea-5227-4587-9c71-91e55f636d6d.jpg
+│       ├── 🖼️ 3cc99d1e-ee50-40a7-a854-99bc9a1d3505.jpg
+│       ├── 🖼️ 4747c926-02b5-40b4-bfe4-c7b767989e0a.jpg
+│       ├── 🖼️ 4c05700b-6509-4107-bd47-ed15d149d5c5.jpg
+│       ├── 🖼️ 5033cf8d-e968-4ecd-af3d-a2a93cdf7e55.jpg
+│       ├── 🖼️ 795acbbd-42d0-477e-b582-0ee7a0ea86d4.jpg
+│       ├── 🖼️ 7c6b88f7-5721-41e0-b7a2-93a8911fd7fd.jpg
+│       ├── 🖼️ 7d1d443d-a78a-4d3c-8c09-1530e0335aff.jpg
+│       ├── 🖼️ 8026d77d-b2c2-4b1e-a397-ee401ec94566.jpg
+│       ├── 🖼️ 89a53a06-4b74-4448-a321-bee0b4816301.jpg
+│       ├── 🖼️ 8ccff82c-a091-4be7-8b71-05fd45578e6d.jpg
+│       ├── 🖼️ 92a3cbfe-91ef-4066-9082-3ef6367e62c6.jpg
+│       ├── 🖼️ a2aa66fd-0b54-49f1-9918-caa0abca199b.jpg
+│       ├── 🖼️ a639504d-82dd-419b-bccb-29e7e6f17c66.jpg
+│       ├── 🖼️ b5072b11-1e37-49b4-a2a0-2aa5870f1683.jpg
+│       ├── 🖼️ c107bd13-c26e-4a51-875e-9a8437b4de66.jpg
+│       ├── 🖼️ e0e232e1-c35d-453d-b935-b29dd2727e54.jpg
+│       └── 🖼️ fa262359-f0f5-4267-8bba-b5843a9fa6fc.jpg
+├── 📁 scripts
+│   ├── 📄 apply-schema.mjs
+│   ├── 📄 check-env.js
+│   ├── 📄 check-supabase-tables.mjs
+│   ├── 📄 debug-supabase-update-delete.js
+│   ├── 📄 doctor.mjs
+│   └── 📄 init-supabase-env.mjs
+├── 📁 services
+│   ├── 📄 orders.ts
+│   └── 📄 products.ts
+├── 📁 supabase
+│   ├── 📄 schema.sql
+│   └── 📄 seed.sql
+├── ⚙️ .env.example
+├── ⚙️ .eslintrc.json
+├── ⚙️ .gitignore
+├── 📝 README.md
+├── 📄 middleware.ts
+├── 📄 next.config.mjs
+├── ⚙️ package-lock.json
+├── ⚙️ package.json
+├── 📄 postcss.config.mjs
+├── 📄 tailwind.config.ts
+└── ⚙️ tsconfig.json
+```
+
+---
+*Generated by FileTree Pro Extension*
