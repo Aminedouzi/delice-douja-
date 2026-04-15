@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     const message =
       typeof body.message === "string" ? body.message.trim() : undefined;
     const items = Array.isArray(body.items)
-      ? body.items.flatMap((item) => {
+      ? body.items.flatMap((item: any) => { {
           if (
             !item ||
             typeof item.name !== "string" ||
