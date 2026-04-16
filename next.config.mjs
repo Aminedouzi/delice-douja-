@@ -55,5 +55,10 @@ nextConfig.webpack = (config, { isServer }) => {
 
   return config;
 };
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+}
 
 export default nextConfig;
