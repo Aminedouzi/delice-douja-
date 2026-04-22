@@ -51,6 +51,6 @@ export function gmailComposeLink(subject?: string, body?: string) {
   return `https://mail.google.com/mail/?${params.toString()}`;
 }
 
-export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_HANDLE}/`;
+export const INSTAGRAM_URL = "https://www.instagram.com/delice_douja1111?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 /** Update in lib/constants.ts if your Facebook page URL differs */
 export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61566609781979";
