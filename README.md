@@ -30,6 +30,16 @@ Optionally run `supabase/seed.sql` for sample products.
 
 Copy `.env.example` to `.env` and fill in:
 
+```bash
+cp .env.example .env
+```
+
+If you prefer to keep local secrets in a machine-only file, also copy `.env.local.example` to `.env.local`. Next.js loads `.env.local` first, and it is ignored by Git:
+
+```bash
+cp .env.local.example .env.local
+```
+
 | Variable | Purpose |
 |----------|---------|
 | `NEXT_PUBLIC_SUPABASE_URL` | Project URL |
@@ -37,6 +47,7 @@ Copy `.env.example` to `.env` and fill in:
 | `SUPABASE_SERVICE_ROLE_KEY` | **Server only** — required so admin API can insert/update/delete products (RLS blocks anon writes). |
 | `ADMIN_PASSWORD` / `ADMIN_JWT_SECRET` | Admin login |
 | `NEXT_PUBLIC_SITE_URL` | Canonical URL (SEO / sitemap) |
+| `FORMSPREE_ENDPOINT` / `ORDER_NOTIFICATION_EMAIL` | Contact / order notifications |
 
 ## Run locally
 
@@ -71,7 +82,7 @@ Or only `npm run dev` after things already work.
 
 ## Deploy (Vercel)
 
-Add the same env vars in Vercel. Never commit `SUPABASE_SERVICE_ROLE_KEY` or `ADMIN_JWT_SECRET`.
+Add the same env vars in Vercel. Never commit real `.env` or `.env.local` files, and never commit secrets such as `SUPABASE_SERVICE_ROLE_KEY` or `ADMIN_JWT_SECRET`.
 
 ## License
 
