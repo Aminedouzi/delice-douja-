@@ -118,7 +118,8 @@
     "location": "Morocco",
     "rights": "All rights reserved.",
     "follow": "Follow us",
-    "map": "Map"
+    "map": "Map",
+    "language": "Language"
   },
   "categories": {
     "CAKE_ANNIVERSAIRE": "Birthday cakes",

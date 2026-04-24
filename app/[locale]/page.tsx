@@ -16,6 +16,32 @@ const categoryEmoji: Partial<Record<ProductCategory, string>> = {
   COOKIES: "🍪",
 };
 
+type CustomOrderMessage = {
+  label: "FR" | "EN" | "AR";
+  lang: "fr" | "en" | "ar";
+  text: string;
+  dir?: "rtl";
+};
+
+const customOrderMessages: CustomOrderMessage[] = [
+  {
+    label: "FR",
+    lang: "fr",
+    text: "Nous réalisons tout type de pâtisserie sur commande.",
+  },
+  {
+    label: "EN",
+    lang: "en",
+    text: "We can make any type of pastry to order.",
+  },
+  {
+    label: "AR",
+    lang: "ar",
+    dir: "rtl",
+    text: "يمكننا إعداد أي نوع من الحلويات حسب الطلب.",
+  },
+];
+
 type Props = { params: { locale: string } };
 
 function metadataBaseUrl(): URL {
@@ -125,6 +151,30 @@ export default async function HomePage({ params }: Props) {
               >
                 {t("hero.ctaWhatsapp")}
               </a>
+            </div>
+            <div className="rounded-[1.75rem] border border-chocolate/10 bg-cream/80 p-4 shadow-card backdrop-blur-sm sm:p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-chocolate/60">
+                Sur commande • Made to order • حسب الطلب
+              </p>
+              <div className="mt-4 grid gap-3 lg:grid-cols-3">
+                {customOrderMessages.map((message) => (
+                  <div
+                    key={message.label}
+                    className="rounded-2xl bg-white/70 p-4 text-sm leading-relaxed text-chocolate shadow-sm"
+                  >
+                    <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.24em] text-gold-dark">
+                      {message.label}
+                    </span>
+                    <p
+                      lang={message.lang}
+                      dir={message.dir}
+                      className={message.dir === "rtl" ? "text-right" : undefined}
+                    >
+                      {message.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
             </div>
           </div>
