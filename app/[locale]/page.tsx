@@ -10,6 +10,9 @@ import {
   type ProductCategory,
 } from "@/lib/constants";
 import type { Locale } from "@/lib/constants";
+import { getAllProducts } from "@/services/products";
+import { toProductPublic } from "@/lib/types/database";
+import { ProductCard } from "@/components/ProductCard";
 
 const categoryEmoji: Partial<Record<ProductCategory, string>> = {
   BROWNIES: "🍫",
@@ -244,6 +247,39 @@ export default async function HomePage({ params }: Props) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="text-center">
+          <h2 className="font-display text-3xl font-bold text-chocolate sm:text-4xl">
+            {t("home.featuredTitle") || t("store.title")}
+          </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-chocolate/70">
+            {t("home.featuredSubtitle") || t("store.subtitle")}
+          </p>
+        </div>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {(
+            await getAllProducts()
+          )
+            .slice(0, 6)
+            .map((product) => (
+              <ProductCard
+                key={product.id}
+                product={toProductPublic(product)}
+                locale={locale}
+                t={t}
+              />
+            ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link
+            href={`${prefix}/store`}
+            className="inline-flex rounded-full border-2 border-chocolate/25 bg-cream/80 px-8 py-3 text-base font-semibold text-chocolate transition-all duration-300 hover:border-gold hover:bg-light-pink/30"
+          >
+            {t("hero.ctaStore")}
+          </Link>
         </div>
       </section>
     </>
